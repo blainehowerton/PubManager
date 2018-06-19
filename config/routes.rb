@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :subscriptions
   resources :publications
   get '/home/welcome', to: 'home#welcome'
 
