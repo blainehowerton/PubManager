@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<br>
+<div class="jumbotron">
+  <h1>Publications</h1>
+  <p>Welcome to the publications area.</p>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Actions</h3>
+  </div>
+  <div class="panel-body">
+
+<a class="btn btn-primary btn-lg btn-block" href="/publications/new" role="button">New Publication</a>
+
+</div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Publications</h3>
+  </div>
+  <div class="panel-body">
+      <div class="table-responsive">
+      <table class="table table-striped">
+
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @publications.each do |publication| %>
+            <tr>
+              <td><%= publication.name %></td>
+              <td><%= publication.description %></td>
+              <td><%= link_to 'Show', publication %></td>
+              <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
+              <td><%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+</div>
+</div>
+</div>
+
+
+<br>
+
+<br>
+
+<%= link_to 'Home', '/' %>  |
+<%= link_to 'New Publication', new_publication_path %>
