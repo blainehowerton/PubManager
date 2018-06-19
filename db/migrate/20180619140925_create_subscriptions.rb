@@ -4,6 +4,8 @@ class CreateSubscriptions < ActiveRecord::Migration[5.0]
       t.date :sign_up_date
       t.date :expiration_date
       t.text :notes
+      t.integer :publication
+      t.integer :customerid
 
       t.timestamps
     end

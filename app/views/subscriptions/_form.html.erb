@@ -12,6 +12,16 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :customerid %>
+    <%= f.text_field :customerid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :publication %>
+    <%= f.text_field :publication %>
+  </div>
+
+  <div class="field">
     <%= f.label :sign_up_date %>
     <%= f.date_select :sign_up_date %>
   </div>
@@ -25,6 +35,9 @@
     <%= f.label :notes %>
     <%= f.text_area :notes %>
   </div>
+
+
+
 
   <div class="actions">
     <%= f.submit %>

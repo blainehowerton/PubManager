@@ -5,6 +5,8 @@
 <table>
   <thead>
     <tr>
+      <th>Customer ID</th>
+      <th>Publication</th>
       <th>Sign up date</th>
       <th>Expiration date</th>
       <th>Notes</th>
@@ -15,6 +17,8 @@
   <tbody>
     <% @subscriptions.each do |subscription| %>
       <tr>
+        <td><%= subscription.customerid %></td>
+        <td><%= subscription.publication %></td>
         <td><%= subscription.sign_up_date %></td>
         <td><%= subscription.expiration_date %></td>
         <td><%= subscription.notes %></td>

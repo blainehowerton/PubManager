@@ -64,6 +64,8 @@ ActiveRecord::Schema.define(version: 20180619140925) do
     t.date     "sign_up_date"
     t.date     "expiration_date"
     t.text     "notes"
+    t.integer  "publication"
+    t.integer  "customerid"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
