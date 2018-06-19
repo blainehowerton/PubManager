@@ -1,0 +1,73 @@
+
+<br>
+<div class="jumbotron">
+  <h1>Files</h1>
+  <p>Welcome to <%= current_user.name %>'s upload portal.</p>
+  <p id="notice"><%= notice %></p>
+
+
+</div> 
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Actions</h3>
+  </div>
+  <div class="panel-body">
+
+    <a class="btn btn-primary btn-lg btn-block" href="/uploads/new" role="button">New Upload</a>
+
+
+  </div>
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Items</h3>
+  </div>
+  <div class="panel-body">
+
+<div class="panel-body">
+      <div class="table-responsive">
+      <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Date & Time Created</th>
+      <th>User</th>
+      <th>Submitter Email</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @uploads.each do |upload| %>
+      <tr>
+        <% name = upload.user.name %>
+        <td><%= upload.created_at %></td>
+        <td><%= name %></td>
+        <td><%= upload.email %></td>
+        <td><%= upload.description %></td>
+        <td><a href="<%= upload.image.url %>" download>[download]</a></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div></div>
+
+<br>
+
+
+
+      
+  </div>
+</div>
+<br>
+
+<%= link_to 'New Upload', new_upload_path %>
+
+<br><br>
+<hr>
+<h6>This service is provided by <a href="http://digitalevents.solutions" target="_blank">http://digitalevents.solutions</a></h6>

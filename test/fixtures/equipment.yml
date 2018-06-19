@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  in_service_date: 2016-12-05
+  serial: MyString
+
+two:
+  name: MyString
+  description: MyText
+  in_service_date: 2016-12-05
+  serial: MyString

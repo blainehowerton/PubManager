@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<br>
+<div class="jumbotron">
+  <h1>Deductions</h1>
+  <p>The Deductions Manager lists and manages deductions for physical assets.</p>
+
+
+</div> 
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Actions</h3>
+  </div>
+  <div class="panel-body">
+    <a class="btn btn-primary btn-lg btn-block" href="/deductions/new" role="button">Add Deduction Item</a>
+  </div>
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Items</h3>
+  </div>
+  <div class="panel-body">
+      <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Show</th>
+            <th>Edit</th>
+            <th>Equipment</th>
+            <th>Link to return</th>
+            <th>Deduction year</th>
+            <th>Cost</th>
+            <th>Elected cost</th>
+            <th>Classification</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @deductions.each do |deduction| %>
+            <tr>
+              <td>
+              <button type="button" class="btn btn-default" aria-label="Left Align">
+                <%= link_to '', deduction, :id => "button_id", :class => "glyphicon glyphicon-info-sign" %>
+              </td>
+              <td>
+                <button type="button" class="btn btn-default" aria-label="Left Align">
+                <%= link_to '', edit_deduction_path(deduction), :id => "button_id", :class => "glyphicon glyphicon-pencil" %>
+              </td>
+              <td><%= deduction.equipment.name %></td>
+              <td><%= deduction.link_to_return %></td>
+              <td><%= deduction.deduction_year %></td>
+              <td><%= number_to_currency(deduction.equipment.amount) %></td>
+              <td><%= number_to_currency(deduction.elected_cost) %></td>
+              <td><%= deduction.classification %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    </div>
+</div>
+<br>
+
+<%= link_to 'Home', '/' %>  |
+<%= link_to 'Equipment', '/equipment' %>  |
+<%= link_to 'New Item', new_deduction_path %>
+
+
+
+
+
+
+

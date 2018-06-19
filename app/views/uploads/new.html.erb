@@ -1,0 +1,33 @@
+<br>
+<div class="jumbotron">
+  <h1>Send Us Your File</h1>
+  <p>Welcome to <%= current_user.name %>'s upload portal.</p>
+   <p id="notice"><%= notice %></p>
+
+
+
+
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">File Information</h3>
+  </div>
+  <div class="panel-body">
+
+
+<%= render 'form', upload: @upload %>
+
+<p>Please be patient while your file uploads.  Do not refresh or reload your browser while your file is uploading.  When your upload is successful, you will be redirected to a Thank You screen.</p>
+
+<p>Problems?  Contact us at 720.255.1640 xt 101, or <a href="mailto:bhowerton@yghdtv.com?Subject=Hello,%20Upload%20Issues">[send an email to bhowerton@yghdtv.com]</a></p>
+
+      
+  </div>
+</div>
+<br>
+
+<%= link_to 'List Uploads', uploads_path %>
+
+<br><br>
+<h6>This is a service provided by <a href="http://digitalevents.solutions" target="_blank">http://digitalevents.solutions</a></h6>

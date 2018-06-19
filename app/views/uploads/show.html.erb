@@ -1,0 +1,37 @@
+
+<br>
+<div class="jumbotron">
+  <h1>Thank You.</h1>
+  <p id="notice"><%= notice %></p>
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">File Information</h3>
+  </div>
+  <div class="panel-body">
+
+<p>Your file information is below.  We appreciate you taking the time to send us your content.  Someone will contact you via the submitted email address if there are any further questions.  Have a Great Day!</p>
+
+<p>
+  <strong>Submitter:</strong>
+  <%= @upload.submitter %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @upload.description %>
+</p>
+      
+  </div>
+</div>
+<br>
+
+<%= link_to 'Edit', edit_upload_path(@upload) %> |
+<%= link_to 'List Uploads', uploads_path %>
+
+<br><br>
+<hr>
+<h6>This service is provided by <a href="http://digitalevents.solutions" target="_blank">http://digitalevents.solutions</a></h6>

@@ -1,0 +1,19 @@
+<br>
+<div class="jumbotron">
+  <h1>Asset Manager</h1>
+  <p>The Asset Manager lists and manages digital and physical assets.</p>
+</div>
+<p><a class="btn btn-primary btn-lg btn-block" href="/uploads" role="button">Public File Uploads</a></p>
+<p><a class="btn btn-primary btn-lg btn-block" href="/equipment" role="button">Equipment</a></p>
+<p><a class="btn btn-primary btn-lg btn-block" href="/customers" role="button">Customers</a></p>
+<p><a class="btn btn-primary btn-lg btn-block" href="/chat" role="button">Text Broadcaster</a></p>
+<p><a class="btn btn-primary btn-lg btn-block" href="/admin" role="button">Admin</a></p>
+
+<!--  User Account Login/Logout -->
+	  <p><% if user_signed_in? %>
+	  User account (<%= current_user.email %>) IS signed in.  
+	  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+	    <% else %>
+	    User account is NOT signed in.
+	    <%= link_to('Login', new_user_session_path)  %>  
+	    <% end %><br></p>
