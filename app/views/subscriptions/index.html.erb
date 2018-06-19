@@ -5,7 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Customer ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
       <th>Publication</th>
       <th>Sign up date</th>
       <th>Expiration date</th>
@@ -17,8 +18,9 @@
   <tbody>
     <% @subscriptions.each do |subscription| %>
       <tr>
-        <td><%= subscription.customerid %></td>
-        <td><%= subscription.publication %></td>
+        <td><%= subscription.customer.first_name %></td>
+        <td><%= subscription.customer.last_name %></td>
+        <td><%= subscription.publication.name %></td>
         <td><%= subscription.sign_up_date %></td>
         <td><%= subscription.expiration_date %></td>
         <td><%= subscription.notes %></td>
@@ -29,10 +31,6 @@
     <% end %>
   </tbody>
 </table>
-
-<% @customers.each do |customer| %>
-<%= customer.first_name %>
-<% end %>
 
 <br>
 

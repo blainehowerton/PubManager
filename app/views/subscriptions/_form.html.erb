@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.collection_select(:customerid, Customer.all, :id, :first_name) %>
+    <%= f.collection_select(:customer_id, Customer.all, :id, :last_name) %>
   </div>
 
   <div class="field">
-    <%= f.collection_select(:publication, Publication.all, :id, :name) %>
+    <%= f.collection_select(:publication_id, Publication.all, :id, :name) %>
   </div>
 
   <div class="field">

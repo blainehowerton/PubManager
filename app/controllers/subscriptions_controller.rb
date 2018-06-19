@@ -5,7 +5,6 @@ class SubscriptionsController < ApplicationController
   # GET /subscriptions.json
   def index
     @subscriptions = Subscription.all
-    @customers = Customer.all
   end
 
   # GET /subscriptions/1
@@ -20,6 +19,7 @@ class SubscriptionsController < ApplicationController
 
   # GET /subscriptions/1/edit
   def edit
+    @publications = Publication.all
   end
 
   # POST /subscriptions
@@ -70,6 +70,6 @@ class SubscriptionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def subscription_params
-      params.require(:subscription).permit(:sign_up_date, :expiration_date, :notes, :publication, :customerid)
+      params.require(:subscription).permit(:sign_up_date, :expiration_date, :notes, :customer_id, :publication_id)
     end
 end
