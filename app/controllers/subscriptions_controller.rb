@@ -3,6 +3,7 @@ class SubscriptionsController < ApplicationController
 
   # GET /subscriptions
   # GET /subscriptions.json
+
   def index
     @subscriptions = Subscription.search(params[:search])
     @customers = Customer.all

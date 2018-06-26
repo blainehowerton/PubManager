@@ -4,9 +4,9 @@ class Subscription < ApplicationRecord
 
   def self.search(search)
     if search
-        where(["notes LIKE ?","%#{search}"])
-    else
+        where(["publication_id LIKE ?","%#{search}%"])
+      else
         all
-     end
-  end
+      end
+    end
 end
