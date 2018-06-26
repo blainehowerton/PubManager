@@ -7,6 +7,7 @@ class SubscriptionsController < ApplicationController
   def index
     @subscriptions = Subscription.search(params[:search])
     @customers = Customer.all
+    @publications = Publication.all
   end
 
   # GET /subscriptions/1

@@ -6,7 +6,14 @@
   <% end %>
   *searches by publication id only
 
+<br>
+Publications: <br>
+<% @publications.each do |publication| %>
+<%= publication.id %>.
+<%= publication.name %>
+<br>
 
+<% end %>
 
 <h1>Subscriptions</h1>
 
