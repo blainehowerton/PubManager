@@ -13,7 +13,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.collection_select(:customer_id, Customer.all, :id, :last_name) %>
+    <%= collection_select( :customer, :customer_id, Customer.all, :id, :last_name) %>
   </div>
 
   <div class="field">
