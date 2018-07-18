@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
-  before_filter do 
+  before_filter do
       redirect_to "/home/welcome" unless current_user && current_user.admin?
   end
   # GET /customers
@@ -12,6 +12,8 @@ class CustomersController < ApplicationController
   # GET /customers/1
   # GET /customers/1.json
   def show
+    @subscriptions = Subscription.all
+    @publications = Publication.all
   end
 
   # GET /customers/new
