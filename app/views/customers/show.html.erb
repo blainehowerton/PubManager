@@ -17,7 +17,7 @@
 
 <% @subscriptions.each do |subscription| %>
   <% if subscription.customer_id == @customer.id %>
-    Subscription: <%= subscription.publication.name %> <br>
+    Subscription: <%= subscription.publication.name %> (Expires <%= subscription.expiration_date %>) <br>
   <% end %>
 <% end %>
 
