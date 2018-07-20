@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :orders
   resources :editions
   resources :subscriptions
   resources :publications

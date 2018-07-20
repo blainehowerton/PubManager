@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client: 1
+  amount: 9.99
+  ad_size: MyString
+  publication: 1
+  edition: 1
+  date: 2018-07-19 22:35:34
+  description: MyText
+
+two:
+  client: 1
+  amount: 9.99
+  ad_size: MyString
+  publication: 1
+  edition: 1
+  date: 2018-07-19 22:35:34
+  description: MyText
