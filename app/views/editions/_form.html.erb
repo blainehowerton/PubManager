@@ -1,0 +1,46 @@
+<%= form_for(edition) do |f| %>
+  <% if edition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(edition.errors.count, "error") %> prohibited this edition from being saved:</h2>
+
+      <ul>
+      <% edition.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.collection_select( :publication_id, Publication.all, :id, :name) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :month %>
+    <%= f.text_field :month %>
+  </div>
+
+  <div class="field">
+    <%= f.label :year %>
+    <%= f.text_field :year %>
+  </div>
+
+  <div class="field">
+    <%= f.label :number %>
+    <%= f.number_field :number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :volume %>
+    <%= f.number_field :volume %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

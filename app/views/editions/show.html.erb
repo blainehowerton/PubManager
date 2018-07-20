@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Publication:</strong>
+  <%= @edition.publication_id %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @edition.month %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @edition.year %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @edition.number %>
+</p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @edition.volume %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @edition.description %>
+</p>
+
+<%= link_to 'Edit', edit_edition_path(@edition) %> |
+<%= link_to 'Back', editions_path %>
