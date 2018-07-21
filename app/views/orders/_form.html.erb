@@ -16,6 +16,10 @@
   </div>
 <br>
   <div class="field">
+      Edition Name: <%= f.collection_select( :edition, Edition.all, :id, :name) %>
+  </div>
+<br>
+  <div class="field">
     <%= f.label :amount %>
     <%= f.text_field :amount %>
   </div>
@@ -25,23 +29,6 @@
     <%= f.text_field :ad_size %>
   </div>
 <br>
-  <div class="field">
-    Publication: <%= f.collection_select( :publication_id, Publication.all, :id, :name) %>
-  </div>
-<br>
-<div class="field">
-  Edition Month: <%= f.collection_select( :edition_id, Edition.all, :id, :month) %>
-</div>
-<br>
-<div class="field">
-  Edition Year: <%= f.collection_select( :edition_id, Edition.all, :id, :year) %>
-</div>
-
-  <div class="field">
-    <%= f.label :date %>
-    <%= f.datetime_select :date %>
-  </div>
-
   <div class="field">
     <%= f.label :description %>
     <%= f.text_area :description %>
