@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<%= form_tag orders_path, :method => 'get' do %>
+  <%= collection_select(params[:search], :search, Edition.all, :id, :name, :prompt => true) %>
+  <%= submit_tag "Search" %>
+  <% end %>
+  *narrow Orders by Edition
+
 <h1>Orders</h1>
 
 <table>
