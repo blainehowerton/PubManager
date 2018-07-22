@@ -12,13 +12,19 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+  </div>
+
+  <div class="field">
       First Name: <%= f.collection_select( :customer_id, Customer.all, :id, :first_name) %>
   </div>
 <br>
   <div class="field">
-      Edition Name: <%= f.collection_select( :edition, Edition.all, :id, :name) %>
+      Edition Name: <%= f.collection_select( :edition_id, Edition.all, :id, :name) %>
   </div>
 <br>
+
   <div class="field">
     <%= f.label :amount %>
     <%= f.text_field :amount %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180721045028) do
+ActiveRecord::Schema.define(version: 20180722042549) do
 
   create_table "customers", force: :cascade do |t|
     t.string   "first_name"
@@ -68,17 +68,15 @@ ActiveRecord::Schema.define(version: 20180721045028) do
 
   create_table "orders", force: :cascade do |t|
     t.integer  "customer_id"
-    t.integer  "publication_id"
     t.integer  "edition_id"
-    t.decimal  "amount",         precision: 5, scale: 2
+    t.decimal  "amount",      precision: 5, scale: 2
     t.string   "ad_size"
     t.datetime "date"
     t.text     "description"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.index ["customer_id"], name: "index_orders_on_customer_id"
     t.index ["edition_id"], name: "index_orders_on_edition_id"
-    t.index ["publication_id"], name: "index_orders_on_publication_id"
   end
 
   create_table "publications", force: :cascade do |t|
